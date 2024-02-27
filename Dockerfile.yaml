@@ -1,0 +1,18 @@
+FROM default-route-openshift-image-registry.apps-crc.testing/build/msr-base:latest
+
+ARG GIT_USER
+ARG GIT_PASSWORD
+
+ENV _GIT_USER=$GIT_USER
+ENV _GIT_PASSWORD=$GIT_PASSWORD
+
+LABEL container-type="msr"
+
+COPY build/packages.yaml /opt/softwareag
+
+RUN /opt/softwareag/wpx -i /opt/softwareag/packages.yaml
+
+WORKDIR /
+
+ENV _GIT_USER=
+ENV _GIT_PASSWORD=

@@ -1,0 +1,2 @@
+image:
+  repository: default-route-openshift-image-registry.apps-crc.testing/build/gitops-demo-container:latest

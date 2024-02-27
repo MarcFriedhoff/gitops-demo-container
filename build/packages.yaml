@@ -1,0 +1,22 @@
+destinationPath: /opt/softwareag/IntegrationServer/packages
+
+repositories:
+  - name: GitOpsDemo
+    url: $_GIT_USER
+    username: $_GIT_PASSWORD
+    password:
+    branch: master
+  - name: GitOpsDemoCommon
+    url: $_GIT_USER
+    username: $_GIT_PASSWORD
+
+packages:
+  - repo: GitOpsDemo
+    prefix: IS
+    names: 
+      - GitOpsDemo
+      
+  - repo: GitOpsDemoCommon
+    prefix: IS
+    names: 
+      - GitOpsDemoCommon

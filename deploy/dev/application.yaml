@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+  name: gitops-demo-dev
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: build
+  project: gitops-demo-dev
+  sources:
+  - path: microservicesruntime/helm
+    helm:
+      valueFiles:
+      - $values/deploy/dev/values.yaml
+    repoURL: 'https://github.com/SoftwareAG/webmethods-helm-charts.git'
+    targetRevision: 'HEAD'
+  - ref: values
+    repoURL: 'https://git.uniqa.at/git/scm/uqesb/uniqa-ctr-contract-services.git'
+    targetRevision: 'dev'
+  syncPolicy:
+    automated: 
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
