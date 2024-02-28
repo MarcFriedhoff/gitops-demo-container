@@ -2,21 +2,21 @@ destinationPath: /opt/softwareag/IntegrationServer/packages
 
 repositories:
   - name: GitOpsDemo
-    url: $_GIT_USER
-    username: $_GIT_PASSWORD
-    password:
-    branch: master
+    url: https://github.com/MarcFriedhoff/gitops-demo-solution.git
+    username: $_GIT_USERNAME
+    password: $_GIT_PASSWORD
   - name: GitOpsDemoCommon
-    url: $_GIT_USER
-    username: $_GIT_PASSWORD
+    url: https://github.com/MarcFriedhoff/gitops-demo-common.git
+    username: $_GIT_USERNAME
+    password: $_GIT_PASSWORD
 
 packages:
   - repo: GitOpsDemo
-    prefix: IS
+    prefix: IS/packages
     names: 
       - GitOpsDemo
       
   - repo: GitOpsDemoCommon
-    prefix: IS
+    prefix: IS/packages
     names: 
       - GitOpsDemoCommon
