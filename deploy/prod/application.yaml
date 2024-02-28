@@ -12,7 +12,7 @@ spec:
   - path: microservicesruntime/helm
     helm:
       valueFiles:
-      - $values/deploy/dev/values.yaml
+      - $values/deploy/prod/values.yaml
       - $license/values.yaml
     repoURL: 'https://github.com/SoftwareAG/webmethods-helm-charts.git'
     targetRevision: 'dev-openshift'
