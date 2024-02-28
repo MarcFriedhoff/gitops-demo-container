@@ -13,10 +13,14 @@ spec:
     helm:
       valueFiles:
       - $values/deploy/dev/values.yaml
+      - $license/deploy/dev/values.yaml
     repoURL: 'https://github.com/SoftwareAG/webmethods-helm-charts.git'
     targetRevision: 'HEAD'
   - ref: values
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-container.git'
+    targetRevision: 'HEAD'
+  - ref: license
+    repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-license.git'
     targetRevision: 'HEAD'
   syncPolicy:
     automated: {}
