@@ -1,6 +1,6 @@
 image:
-  repository: image-registry.openshift-image-registry.svc:5000/build/webmethods-microservicesruntime
-  tag: 10.15
+  repository: image-registry.openshift-image-registry.svc:5000/build/msr-base
+  tag: latest
 podSecurityContext:
   fsGroup: null
 
