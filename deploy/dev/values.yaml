@@ -3,3 +3,5 @@ image:
   tag: 10.15
 podSecurityContext:
   fsGroup: null
+
+imagePullSecrets:
