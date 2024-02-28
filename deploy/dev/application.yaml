@@ -15,7 +15,7 @@ spec:
       - $values/deploy/dev/values.yaml
       - $license/values.yaml
     repoURL: 'https://github.com/SoftwareAG/webmethods-helm-charts.git'
-    targetRevision: 'HEAD'
+    targetRevision: 'dev-openshift'
   - ref: values
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-container.git'
     targetRevision: 'HEAD'

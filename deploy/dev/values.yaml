@@ -5,3 +5,12 @@ podSecurityContext:
   fsGroup: null
 
 imagePullSecrets:
+
+ingress:
+  enabled: false
+ 
+route:
+  enabled: true
+  host: gitops-demo-msr.dev.apps-crc.testing
+  tls:
+    termination: edge
