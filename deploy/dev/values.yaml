@@ -1,5 +1,5 @@
 image:
-  repository: default-route-openshift-image-registry.apps-crc.testing/build/webmethods-microservicesruntime
+  repository: image-registry.openshift-image-registry.svc:5000/build/webmethods-microservicesruntime
   tag: 10.15
 podSecurityContext:
   fsGroup: null
