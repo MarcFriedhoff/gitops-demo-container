@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-demo-dev
+  name: gitops-demo-prod
   namespace: openshift-gitops
 spec:
   destination:
@@ -18,7 +18,7 @@ spec:
     targetRevision: 'dev-openshift'
   - ref: values
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-container.git'
-    targetRevision: 'HEAD'
+    targetRevision: 'prod'
   - ref: license
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-license.git'
     targetRevision: 'HEAD'

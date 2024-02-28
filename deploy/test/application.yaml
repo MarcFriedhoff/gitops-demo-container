@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-demo-dev
+  name: gitops-demo-test
   namespace: openshift-gitops
 spec:
   destination:
@@ -12,13 +12,13 @@ spec:
   - path: microservicesruntime/helm
     helm:
       valueFiles:
-      - $values/deploy/dev/values.yaml
+      - $values/deploy/test/values.yaml
       - $license/values.yaml
     repoURL: 'https://github.com/SoftwareAG/webmethods-helm-charts.git'
     targetRevision: 'dev-openshift'
   - ref: values
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-container.git'
-    targetRevision: 'HEAD'
+    targetRevision: 'test'
   - ref: license
     repoURL: 'https://github.com/MarcFriedhoff/gitops-demo-license.git'
     targetRevision: 'HEAD'

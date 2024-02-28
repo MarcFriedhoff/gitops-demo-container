@@ -1,2 +1,16 @@
 image:
-  repository: default-route-openshift-image-registry.apps-crc.testing/build/gitops-demo-container:latest
+  repository: image-registry.openshift-image-registry.svc:5000/build/msr-base
+  tag: latest
+podSecurityContext:
+  fsGroup: null
+
+imagePullSecrets:
+
+ingress:
+  enabled: false
+ 
+route:
+  enabled: true
+  host: gitops-demo-msr.test.apps-crc.testing
+  tls:
+    termination: edge
