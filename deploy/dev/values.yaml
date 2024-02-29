@@ -1,6 +1,6 @@
 image:
   repository: image-registry.openshift-image-registry.svc:5000/build/gitops-demo-msr
-  tag: latest
+  tag: 1.0.5
 podSecurityContext:
   fsGroup: null
 
